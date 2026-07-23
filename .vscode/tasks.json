@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clear notebook metadata noise",
+            "detail": "Re-stage all .ipynb files through the nbstripout filter to clear phantom 'Modified' badges caused by kernelspec/language_info metadata.",
+            "type": "shell",
+            "command": "git",
+            "args": ["add", "--", "*.ipynb"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "close": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
